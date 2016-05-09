@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <link href="../_bootstrap/css/bootstrap.min.css" rel="stylesheet" />
+    <link href="../_css/estilo.css" rel="stylesheet" />
+    <title>BreakDesk</title>
+</head>
+<body id="corpo">
+
+<nav class="navbar navbar-inverse">
+    <div class="container-fluid">
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+            <ul class="nav navbar-nav">
+                <li><a href="principal.html">Inicio</a></li>
+                <li><a href="cadastro.html">Cadastro</a></li>
+                <li><a href="relatorio.html">Relatórios</a></li>
+            </ul>
+            <ul class="nav navbar-nav navbar-right">
+                <li><a href="#">Suporte</a></li>
+                <li class="dropdown">
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="true">
+                        Configurações
+                        <span class="caret"></span></a>
+                    <ul class="dropdown-menu">
+                        <li><a href="#">Seu nome</a></li>
+                        <li><a href="#">Mudar Senha</a></li>
+                        <li><a href="#"></a></li>
+                        <li role="separator" class="divider"></li>
+                        <li><a href="#">Sair</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+    </div>
+</nav>
+
+<div class="container" id="container_principal">
+
+    <div id="cadastro">
+
+        <h2>Cadastro de Funcionario</h2>
+        <form class="form-group" method="post">
+            <div class="form-group">
+                <label for="nome">Nome:</label>
+                <input type="text" id="nome" class="form-control">
+                <label for="sobremone">Sobrenome</label>
+                <input type="text" id="sobremone" class="form-control">
+                <label for="cargo">Função</label>
+                <input type="text" id="cargo" class="form-control">
+                <label for="email">E-mail:</label>
+                <input type="email" id="email" class="form-control">
+                <br>
+
+                <button type="reset" class="btn btn-danger">Limpar</button>
+                <button type="submit" class="btn btn-danger">Salvar</button>
+            </div>
+        </form>
+    </div>
+
+    <div id="listarCadastrados">
+        <h2>Usuários Cadastrados</h2>
+
+        <table class="table table-striped">
+            <thead>
+            <tr>
+                <th>Nome</th>
+                <th>Sobrenome</th>
+                <th>Função</th>
+                <th>E-Mail:</th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr>
+                <th></th>
+                <th></th>
+                <th></th>
+                <th></th>
+            </tr>
+            </tbody>
+        </table>
+    </div>
+</div>
+
+<footer id="rodape">
+    Copyright 2016 - by Cristopher Gollmann
+</footer>
+</body>
+</html>

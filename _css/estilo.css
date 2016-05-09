@@ -1,0 +1,89 @@
+@charset "UTF-8";
+
+html, body{height:100%;}
+
+body#corpo {
+    background-color: #dddddd;
+}
+
+body#corpo h2 {
+    text-align: center;
+}
+
+div#container_login {
+    width: 750px;
+    margin-top: 100px;
+    padding-right: 210px;
+    padding-left: 210px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+div#container_principal {
+    background-color: white;
+}
+
+div#cadastro h2 {
+    text-align: center;
+}
+
+div#cadastro {
+    margin-left: 200px;
+    width: 750px;
+}
+
+div#cadastro button {
+
+}
+
+div#listarCadastrados h2 {
+    text-align: center;
+}
+
+div#cronometrodentro {
+    border: 1px solid #606060;
+    padding: 5px;
+}
+
+div#cronometrofora button {
+    width: 75px;
+    margin-left: 110px;
+    margin-bottom: 25px;
+    margin-top: 5px;
+}
+
+p#cronometro {
+    text-align: center;
+    font-size: 75px;
+    font-family: Arial sans-serif;
+}
+
+div#mostraDiv {
+    display: none;
+}
+
+div#mostraDiv button{
+    width: 120px;
+    margin: 5px;
+}
+
+div#mostraOutraDiv {
+    display: none;
+}
+
+input {
+    display: block;
+}
+
+footer {
+    background-color: #555555;
+    color: white;
+    clear: both;
+    border-top: 1px solid #606060;
+    text-align: center;
+    margin: auto;
+    width: 100%;
+    bottom: 0;
+    position: fixed;
+}
+

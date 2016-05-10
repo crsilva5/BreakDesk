@@ -21,24 +21,27 @@ if($segLogin == false) {
     if($segSenha == false) {
 
         $conectaBanco = mysql_connect("localhost" , "root" , "root");
-            if ($conectaBanco = true) {
+            if ($conectaBanco == true) {
                 mysql_select_db("BreakDesk" , $conectaBanco);
-                $sqlLogin = "SELECT LOGIN, SENHA FROM PESSOA WHERE login = '$login'";
+                $sqlLogin = "SELECT login , senha FROM PESSOA WHERE login = '$login' , '$senha'";
+                    if ($segLogin == true) {
+                        header('location: ../_html/principal.html');
+                    } else {
+                        die();
+                        echo "<script language=javascript>alert('LOGIN E SENHA INVALIDO')
+                                    .window.location.replace('../index.html');</script>";
+                    }
             } else {
                 die();
                 echo "<script language=javascript>alert('ERRO FATAL CONTACTAR SUPORTE')
-                                    .window.location.replace('..//index.html');</script>";
+                                    .window.location.replace('../index.html');</script>";
             }
 
-        mysql_fetch_array();
-        mysql_free_result();
-        mysql_close($conectaBanco);
-
     } else {
-        echo "<script language=javascript>alert('CARACTER INVALIDO').window.location.replace('..//index.html');</script>";
+        echo "<script language=javascript>alert('CARACTER INVALIDO').window.location.replace('../index.html');</script>";
     }
 } else {
-    echo "<script language=javascript>alert('CARACTER INVALIDO').window.location.replace('..//index.html');</script>";
+    echo "<script language=javascript>alert('CARACTER INVALIDO').window.location.replace('../index.html');</script>";
 }
-
+mysql_close($conectaBanco);
 ?>

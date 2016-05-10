@@ -14,6 +14,31 @@
 $login = $_POST['inputEmail'];
 $senha = $_POST['password'];
 
+    $segLogin = strpos($login,";");
+    $segSenha = strpos($senha,";");
 
+if($segLogin == false) {
+    if($segSenha == false) {
+
+        $conectaBanco = mysql_connect("localhost" , "root" , "root");
+            if ($conectaBanco = true) {
+                mysql_select_db("BreakDesk" , $conectaBanco);
+                $sqlLogin = "SELECT LOGIN, SENHA FROM PESSOA WHERE login = '$login'";
+            } else {
+                die();
+                echo "<script language=javascript>alert('ERRO FATAL CONTACTAR SUPORTE')
+                                    .window.location.replace('..//index.html');</script>";
+            }
+
+        mysql_fetch_array();
+        mysql_free_result();
+        mysql_close($conectaBanco);
+
+    } else {
+        echo "<script language=javascript>alert('CARACTER INVALIDO').window.location.replace('..//index.html');</script>";
+    }
+} else {
+    echo "<script language=javascript>alert('CARACTER INVALIDO').window.location.replace('..//index.html');</script>";
+}
 
 ?>
